@@ -13,7 +13,7 @@ data = data[["fixed acidity", "volatile acidity", "quality", "chlorides", "free 
 
 prediction = "fixed acidity"
 
-X = np.array(data.drop([prediction], 1))
+X = np.array(data.drop([prediction], axis=1))
 Y = np.array(data[prediction])
 
 x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(X, Y, test_size=0.15)
